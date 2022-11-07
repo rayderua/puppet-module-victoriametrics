@@ -1,0 +1,35 @@
+{
+  "name": "rayderua-victoriametrics",
+  "version": "0.1.0",
+  "author": "rayderua",
+  "summary": "Install and ьanage VictoriaMetrics services",
+  "license": "Apache-2.0",
+  "source": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+  "project_page": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+  "issues_url": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 2.0.0"
+    },
+    {
+      "name":"puppetlabs/apt",
+       "version_requirement":">=2.2.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.13.1"
+    },
+  ]
+}

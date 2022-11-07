@@ -1,0 +1,21 @@
+[Unit]
+Description=Tiny agent which helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics
+Documentation=https://victoriametrics.github.io/
+After=network.target
+
+[Service]
+Type=simple
+User=<%= @user %>
+LimitNOFILE=65536
+LimitNPROC=32000
+StartLimitBurst=5
+StartLimitInterval=0
+Restart=on-failure
+RestartSec=5
+WorkingDirectory=<%= @storage_dir %>
+EnvironmentFile=/etc/default/<%= @service_name %>
+ExecStart=/usr/bin/vmagent $ARGS
+ExecReload=/bin/kill -SIGHUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
