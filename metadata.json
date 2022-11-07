@@ -1,6 +1,6 @@
 {
   "name": "rayderua-victoriametrics",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "rayderua",
   "summary": "Install and ьanage VictoriaMetrics services",
   "license": "Apache-2.0",
@@ -30,7 +30,7 @@
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.13.1"
-    },
+    }
   ],
   "requirements": [
     {
